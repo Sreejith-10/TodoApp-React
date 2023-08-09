@@ -13,19 +13,19 @@ export default function TodoList(props) {
 		let newVal = prompt("Enter your new task");
 		let trimVal = newVal.trim();
 
-		if(trimVal===""){
+		if (trimVal === "") {
 			alert("Task cannot be empty");
-		}
-		else{
-			let updatedTask = task.map((val)=>{
-				if(val===data){
+		} else {
+			let updatedTask = task.map((val) => {
+				if (val === data) {
 					return trimVal;
-				}else{
+				} else {
 					return val;
 				}
-			})
+			});
 			setTask(updatedTask);
 		}
+	}
 
 	function deleteTask(data) {
 		let updatedTask = task.filter((val) => {
@@ -36,7 +36,6 @@ export default function TodoList(props) {
 		setTask(updatedTask);
 	}
 
-	
 	let taskList = task.map((val) => {
 		return (
 			<li key={val.index} className="todo-list-li">
@@ -65,5 +64,4 @@ export default function TodoList(props) {
 			<ul className="todo-list-ul">{taskList}</ul>
 		</div>
 	);
-	}
 }
