@@ -46,6 +46,7 @@ export default function TodoList(props) {
 		setTask(updatedTask);
 	}
 
+	
 	let taskList = task.map((val) => {
 		return (
 			<li key={val.index} className="todo-list-li">
