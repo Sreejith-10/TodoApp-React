@@ -26,7 +26,6 @@ export default function TodoList(props) {
 			})
 			setTask(updatedTask)
 		}
-
 	function deleteTask(data) {
 		let updatedTask = task.filter((val) => {
 			if (val != data) {
@@ -64,4 +63,5 @@ export default function TodoList(props) {
 			<ul className="todo-list-ul">{taskList}</ul>
 		</div>
 	);
+	}
 }
