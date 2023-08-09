@@ -10,21 +10,21 @@ export default function TodoList(props) {
 	const setTask = props.setTask;
 
 	function editTask(data) {
-		let newVal = prompt("Enter your new task")
-		let trimVal = newVal.trim()
+		let newVal = prompt("Enter your new task");
+		let trimVal = newVal.trim();
 
 		if(trimVal===""){
-			alert("Task cannot be empty")
+			alert("Task cannot be empty");
 		}
 		else{
 			let updatedTask = task.map((val)=>{
 				if(val===data){
-					return trimVal
+					return trimVal;
 				}else{
-					return val
+					return val;
 				}
 			})
-			setTask(updatedTask)
+			setTask(updatedTask);
 		}
 	function deleteTask(data) {
 		let updatedTask = task.filter((val) => {
