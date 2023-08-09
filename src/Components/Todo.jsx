@@ -10,14 +10,18 @@ export default function Todo() {
 
 	function submitData(event) {
 		event.preventDefault();
-		task.push(input);
+		let data = input;
+		let newInput = data.trim();
+		if (newInput === "") {
+			alert("Enter valid task");
+		} else {
+			task.push(newInput);
+		}
 		setInput("");
 	}
-
 	function showChange(event) {
 		setInput(event.target.value);
 	}
-
 	return (
 		<div>
 			<div className="container">
